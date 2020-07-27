@@ -1,4 +1,5 @@
 import Axios from "axios"
+import Link from "next/link"
 
 const Index = ({ data, mood }) => {
     // console.log("RUNNING INDEX COMPONENT");
@@ -8,9 +9,9 @@ const Index = ({ data, mood }) => {
         <div>
             <h1>My Index Page!! </h1>
             <ul>
-                {data.map((post)=>{
-                    return (<li key={post.id }>
-                        {post.title }
+                {data.map((post) => {
+                    return (<li key={post.id}>
+                        <Link href={`/post?id=${post.id}`}><a>{post.title}</a></Link>
                     </li>)
                 })}
             </ul>
@@ -25,7 +26,7 @@ export async function getServerSideProps(context) {
 
     console.log(data[0])
     return {
-        props: { data , mood: "HAPPY"}, // will be passed to the page component as props
+        props: { data, mood: "HAPPY" }, // will be passed to the page component as props
     }
 }
 
