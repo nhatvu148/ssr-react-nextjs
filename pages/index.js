@@ -11,7 +11,7 @@ const Index = ({ data, mood }) => {
             <ul>
                 {data.map((post) => {
                     return (<li key={post.id}>
-                        <Link href={`/post?id=${post.id}`}><a>{post.title}</a></Link>
+                        <Link href={`/post?id=${post.id}`} as={`/p/${post.id}`}><a>{post.title}</a></Link>
                     </li>)
                 })}
             </ul>

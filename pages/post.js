@@ -23,6 +23,7 @@ const Comment = ({ email, body }) => {
 }
 
 export async function getServerSideProps({ query }) {
+    console.log(query)
     const res = await Axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${query.id}`)
     const { data } = res
     console.log(data[0])
