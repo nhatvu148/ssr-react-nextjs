@@ -1,1 +1,8 @@
-/.next/
+# add git-ignore syntax here of things you don't want copied into docker image
+.next
+.git
+.results
+scripts
+*Dockerfile*
+node_modules
+.env
