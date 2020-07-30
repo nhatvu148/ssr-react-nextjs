@@ -8,10 +8,5 @@ services:
       context: .
     volumes:
       - /app/node_modules
-      - ./:/app
     ports:
       - "8080:3000"
-    networks:
-      - net
-networks:
-  net:
