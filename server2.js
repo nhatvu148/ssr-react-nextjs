@@ -21,8 +21,8 @@ app.prepare().then(() => {
         return handle(req, res)
     })
 
-    server.listen(8080, err => {
+    server.listen(3000, err => {
         if (err) throw err
-        console.log("> Now serving on localhost:8080")
+        console.log("> Now serving on localhost:3000")
     })
 })
